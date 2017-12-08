@@ -86,7 +86,6 @@ namespace CRMWebResourceUpload
                         cr["content"] = Convert.ToBase64String(currentFileContents);
                         service.Update(cr);
                         updatedWebResourceIds.Add(cr.Id);
-
                     }
                 }
             }
