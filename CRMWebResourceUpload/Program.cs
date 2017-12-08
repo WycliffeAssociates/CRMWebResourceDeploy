@@ -33,7 +33,7 @@ namespace CRMWebResourceUpload
         {
             string connectionString = args[0];
             string solutionName = args[1];
-            string source = args[2];
+            string source = Path.GetFullPath(args[2]);
 
             Console.WriteLine("Connecting");
             CrmServiceClient service = new CrmServiceClient(connectionString);
@@ -86,7 +86,7 @@ namespace CRMWebResourceUpload
                         cr["content"] = Convert.ToBase64String(currentFileContents);
                         service.Update(cr);
                         updatedWebResourceIds.Add(cr.Id);
-                        
+
                     }
                 }
             }
@@ -190,7 +190,7 @@ namespace CRMWebResourceUpload
             List<string> output = new List<string>();
             foreach (var i in localFiles)
             {
-                output.Add(i.Replace(fullPath + "\\", ""));
+                output.Add(i.Replace(fullPath + "\\", "").Replace("\\", "/"));
             }
 
             return output;
