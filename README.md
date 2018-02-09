@@ -1,3 +1,4 @@
+[![Build status](https://ci.appveyor.com/api/projects/status/w4kk1co6igx7t3tu/branch/master?svg=true)](https://ci.appveyor.com/project/rbnswartz/crmwebresourceupload/branch/master)
 # CRMWebResourceUpload
 A utility to upload and create web resources to dynamics crm
 
