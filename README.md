@@ -3,7 +3,7 @@
 A utility to upload and create web resources to dynamics crm
 
 # Desciption
-Uploading multiple web resources to dynamics crm is a bit of a hassel and gets even more difficult if you want to do so in 
+Uploading multiple web resources to dynamics crm is a bit of a hassle and gets even more difficult if you want to do so in 
 a CD pipleline. So I wrote this piece of software to upload all of the resources in a folder (or set of folders) in order to integrate
 with our internal build pipeline.
 
