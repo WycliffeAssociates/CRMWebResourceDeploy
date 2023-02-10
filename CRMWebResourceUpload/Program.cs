@@ -37,6 +37,14 @@ namespace CRMWebResourceUpload
 
             Console.WriteLine("Connecting");
             CrmServiceClient service = new CrmServiceClient(connectionString);
+            
+            if (!string.IsNullOrEmpty(service.LastCrmError))
+            {
+                Console.WriteLine("Error connecting");
+                Console.WriteLine(service.LastCrmError);
+                Environment.Exit(1);
+            }
+            
             EntityReference solution = GetSolution(service, solutionName);
 
             // Get the two lists of files to compare
